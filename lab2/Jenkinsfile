@@ -32,7 +32,7 @@ pipeline {
                 sh 'python3 scripts/make_prediction.py'
             }
         }
-        post {
+    post {
             always {
                 sh 'echo "Pipeline completed"'
             }

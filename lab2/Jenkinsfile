@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Setup Environment') {
             steps {
-                sh 'echo "Setting up environment...'
+                sh 'echo "Setting up environment..."'
                 sh 'sudo apt update'
                 sh 'sudo apt install -y python3 python3-pip python3-venv'
                 sh 'python3 -m venv venv'

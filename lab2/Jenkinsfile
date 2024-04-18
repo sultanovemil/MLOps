@@ -14,22 +14,22 @@ pipeline {
         }
         stage('Download data') {
             steps {
-                sh 'python3 scripts/download_data.py'
+                sh 'python3 /var/jenkins_home/workspace/lab2/scripts/download_data.py'
             }
         }
         stage('Train model') {
             steps {
-                sh 'python3 scripts/train_model.py'
+                sh 'python3 /var/jenkins_home/workspace/lab2/scripts/train_model.py'
             }
         }
         stage('Test Model') {
             steps {
-                sh 'python3 scripts/test_model.py'
+                sh 'python3 /var/jenkins_home/workspace/lab2/scripts/test_model.py'
             }
         }
         stage('Make prediction') {
             steps {
-                sh 'python3 scripts/make_prediction.py'
+                sh 'python3 /var/jenkins_home/workspace/lab2/scripts/make_prediction.py'
             }
         }
     }
